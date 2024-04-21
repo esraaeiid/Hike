@@ -58,6 +58,69 @@ struct SettingsView: View {
             //MARK: Section: Icons
             
             //MARK: Section: About
+            Section(
+            header: Text("ABOUT The APP"),
+            footer: HStack {
+                Spacer()
+                Text("Copyright © All right reserved.")
+                Spacer()
+            }
+                .padding(.vertical, 8)
+            ) {
+                //1. Basic labeled content
+//                LabeledContent("Application",
+//                               value: "Hike")
+                
+                //2. Advanced labeled content
+                CustomListRowView(
+                    rowLabel: "Application",
+                    rowIcon: "apps.iphone",
+                    rowContent: "HIKE",
+                    rowTintColor: .blue
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Compatability",
+                    rowIcon: "info.circle",
+                    rowContent: "iOS, iPadOS",
+                    rowTintColor: .red
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Technology",
+                    rowIcon: "swift",
+                    rowContent: "Swift",
+                    rowTintColor: .orange
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Version",
+                    rowIcon: "gear",
+                    rowContent: "1.0",
+                    rowTintColor: .purple
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Developer",
+                    rowIcon: "ellipsis.curlybraces",
+                    rowContent: "John Doe",
+                    rowTintColor: .mint
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Designer",
+                    rowIcon: "paintpalette",
+                    rowContent: "Robert Petres",
+                    rowTintColor: .pink
+                )
+                
+                CustomListRowView(
+                    rowLabel: "Website",
+                    rowIcon: "globe",
+                    rowContent: "https://credo.academy",
+                    rowTintColor: .indigo
+                )
+            }
         }
     }
 }
